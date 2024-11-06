@@ -1,7 +1,7 @@
 pipeline {
   agent any 
   tools {
-    maven 'Maven3' // Remplacez par le nom exact configuré dans Jenkins
+    maven 'Maven' // Remplacez par le nom exact configuré dans Jenkins
   }
   stages {
     stage("Clean up") {
