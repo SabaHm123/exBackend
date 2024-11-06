@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh "git clone https://github.com/SabaHm123/exBackend.git"
       }
+    }
       stage ("Generate backend image"){
         steps {
           dir ("backend"){
