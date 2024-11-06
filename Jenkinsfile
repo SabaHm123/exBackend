@@ -16,7 +16,7 @@ pipeline {
     }
     stage("Generate backend image") {
       steps {
-        dir("exBackend/backend") {
+        dir("exBackend") { // Utilisez "exBackend" si le pom.xml est dans ce dossier
           sh "mvn clean install"
           sh "docker build -t backend ."
         }
@@ -24,7 +24,7 @@ pipeline {
     }
     stage("Run docker compose") {
       steps {
-        dir("exBackend/backend") {
+        dir("exBackend") {
           sh "docker compose up -d"
         }
       }
